@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    font-family: 'Lato', sans-serif;
+    background-size: 400% 400%;
+    animation: change 10s ease infinite;
+  }
+  
+  h2 {
+    margin: 50px 0;
+  }
+  
+  .file-drop-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 450px;
+    max-width: 100%;
+    padding: 25px;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+    transition: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .choose-file-button {
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    padding: 8px 15px;
+    margin-right: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  
+  .file-message {
+    font-size: small;
+    font-weight: 300;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    
+  }
+  
+  .mt-100{
+      margin-top:100px;
+  }
+
+  .btns{
+    animation: btnchange 10s ease infinite;
+    margin: 35px;
+  }
+  
+  @keyframes change {
+    0%   {background-position: 0 50%;}
+    50%  {background-position: 100% 50%;}
+    100% {background-position: 0 50%;}
+  }
+
+  @keyframes btnchange {
+    0%   {
+            color:  #e73c7e;
+            border: 1px solid #e73c7e;
+        }
+    50%  {color: #3ec6f8;
+      border: 1px solid #3ec6f8;
+    }
+    100%{
+      color:  #e73c7e;
+      border: 1px solid #e73c7e;
+    }
+  }
