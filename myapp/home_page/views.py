@@ -1,15 +1,17 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
+from django.views.decorators.cache import never_cache
 import os
 from django.core.files.storage import FileSystemStorage
 # Create your views here.
 
-
+@never_cache
 def home(request):
 
     print("request arrived!")
     return render(request,'index.html')
-
+    
+@never_cache
 def handlefile(request):
     print(len(request.FILES))
     if len(request.FILES)!= 0:
